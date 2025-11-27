@@ -48,98 +48,51 @@
     line-height: 1.4;
     margin: 10px 0;
   }
-  .tipps-button {
-    background: #e76f51;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    margin: 10px 0;
-  }
-  .tipps-button:hover {
-    background: #d45a3e;
-  }
-  .tipps-content {
-    display: none;
-    background: #f8f9fa;
-    border-left: 4px solid #e76f51;
-    padding: 15px;
-    margin-top: 10px;
-    border-radius: 4px;
-  }
-  .tipps-content.show {
-    display: block;
-    animation: slideDown 0.3s ease;
-  }
-  @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .hilfe-link {
+  a {
     color: #e76f51;
     text-decoration: none;
-    font-weight: bold;
   }
-  .hilfe-link:hover {
+  a:hover {
     text-decoration: underline;
   }
 </style>
 </head>
 <body>
 
-<h1>🚭 Vapen Jugendinfo</h1>
+<h1>Vapen Jugendinfo</h1>
 
 <div class="tabs">
   <button class="tab-button active" data-tab="sucht">🧠 Sucht</button>
   <button class="tab-button" data-tab="gesundheit">❤️ Gesundheit</button>
   <button class="tab-button" data-tab="umwelt">🌍 Umwelt</button>
-  <button class="tab-button" data-tab="hilfe">💬 Hilfe</button>
+  <button class="tab-button" data-tab="hilfe">💬 Hilfe & Beratung</button>
 </div>
 
 <div id="sucht" class="tab-content">
-  <p><strong>Vapen kann süchtig machen!</strong> Viele Liquids enthalten Nikotin.</p>
-  <p>Nikotin verändert dein Gehirn – besonders bei Jugendlichen wird's schnell zur Gewohnheit.</p>
-  <p>Ca. 20% der Jugendlichen haben schon mal gevaped [web:1][web:2].</p>
+  <p>Vapen kann süchtig machen, weil viele Liquids Nikotin enthalten.</p>
+  <p>Nikotin beeinflusst das Gehirn, vor allem bei Jugendlichen, und macht abhängig.</p>
+  <p>Rund 20% der Jugendlichen haben schon mal vaped und viele starten früh.</p>
 </div>
 
 <div id="gesundheit" class="tab-content" style="display:none">
-  <p>Vapen reizt Lunge & Atemwege → Husten, Bronchitis, Langzeitschäden möglich.</p>
-  <p>Im Dampf sind hunderte Chemikalien versteckt, auch ohne Tabak.</p>
-  <p><strong>Kein sicheres "Light-Rauchen"</strong> [web:12][web:18].</p>
+  <p>Vapen reizt die Atemwege und kann zu Husten, Bronchitis und Langzeitschäden führen.</p>
+  <p>Viele schädliche Stoffe sind versteckt im Dampf, auch ohne Tabak.</p>
+  <p>Vaping ist keine sichere Alternative zum Rauchen.</p>
 </div>
 
 <div id="umwelt" class="tab-content" style="display:none">
-  <p>Vapes = Elektroschrott! Batterien & Elektronik gehören NICHT in den Restmüll.</p>
-  <p>Falsche Entsorgung → Giftstoffe in Boden & Wasser [web:16][web:19].</p>
-  <p><strong>Richtig:</strong> Sammelstelle Elektroschrott oder Recyclo-Box.</p>
+  <p>Vapes enthalten Batterien und Elektronik, die nicht einfach weggeworfen werden dürfen.</p>
+  <p>Falsche Entsorgung schadet der Umwelt – giftige Stoffe und Elektroschrott entstehen.</p>
+  <p>Gib alte Geräte bei Sammelstellen für Elektroschrott ab.</p>
 </div>
 
 <div id="hilfe" class="tab-content" style="display:none">
-  <p><strong>Willst du aufhören?</strong> Das schaffst du! Hol dir Support:</p>
-  <p>👨‍🏫 Lehrpersonen, Eltern oder Jugendtreff-Mitarbeiter*innen</p>
-  <p>📱 Hotlines: <a href="https://www.projugend.ch/" class="hilfe-link" target="_blank">Pro Jugend</a> | <a href="https://www.suchtpraevention.ch/" class="hilfe-link" target="_blank">Suchtprävention</a></p>
-  
-  <button class="tipps-button" onclick="toggleTipps()">💡 Tipps zum Aufhören</button>
-  
-  <div id="tipps" class="tipps-content">
-    <h3>🛡️ Praktische Tipps:</h3>
-    <ul style="font-size: 15px; line-height: 1.5;">
-      <li>🧊 <strong>Kaugummi kauen</strong> oder Karamellen lutschen</li>
-      <li>💧 <strong>Much Wasser trinken</strong> – spült Nikotin raus</li>
-      <li>🏃‍♂️ <strong>Sport machen</strong> – lenkt ab & macht happy</li>
-      <li>🎮 <strong>Apps nutzen:</strong> "QuitNow" oder "Smoke Free"</li>
-      <li>👯‍♀️ <strong>Mit Freund*innen sprechen</strong> – zusammen aufhören</li>
-      <li>⏰ <strong>Zeitpläne:</strong> 1 Tag → 1 Woche → 1 Monat feiern!</li>
-    </ul>
-    <p><em>⚠️ Verkauf an &lt;18 verboten seit 2024!</em></p>
-  </div>
+  <p>Du willst aufhören? Hol dir Unterstützung bei Fachstellen, Lehrpersonen oder Eltern.</p>
+  <p>Der Verkauf von Vapes an Unter-18-Jährige ist seit 2024 verboten.</p>
+  <p>Mehr Infos & Beratung: <a href="https://www.jugendinfo-link.ch" target="_blank">Jugendinfo-Link</a></p>
 </div>
 
 <script>
-  // Tab-Funktionalität
   const buttons = document.querySelectorAll('.tab-button');
   const contents = document.querySelectorAll('.tab-content');
 
@@ -147,20 +100,11 @@
     button.addEventListener('click', () => {
       buttons.forEach(btn => btn.classList.remove('active'));
       contents.forEach(content => content.style.display = 'none');
+
       button.classList.add('active');
       document.getElementById(button.getAttribute('data-tab')).style.display = 'block';
     });
   });
-
-  // Tipps-Button Funktionalität
-  function toggleTipps() {
-    const tipps = document.getElementById('tipps');
-    if (tipps.classList.contains('show')) {
-      tipps.classList.remove('show');
-    } else {
-      tipps.classList.add('show');
-    }
-  }
 </script>
 
 </body>
